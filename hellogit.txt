@@ -7,3 +7,6 @@ Dev branch létrehozása!
  Kelemen Xavér 2026.05.20.
 
  05.20 zoje
+
+
+ 05.20 lacko
