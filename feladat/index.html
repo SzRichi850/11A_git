@@ -8,7 +8,13 @@
     <script src="./script.js"></script>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>To Do Lista</h1>
+            <hr>
+        </header>
 
+<<<<<<< Updated upstream
   <h1>To Do Lista</h1>
 
   <p>Bevásárlás</p>
@@ -24,5 +30,62 @@
 
   <p>2026. 05. 21. wauuuu</p>
 
+=======
+        <main>
+            <section id="feladat-hozzaadas">
+                <h2>Új feladat</h2>
+                <input type="text" id="uj-feladat-input" placeholder="Írd be a feladatot..."><br>
+                <button id="hozzaadas-btn">Hozzáadás</button>
+            </section>
+
+            <hr>
+
+            <section id="aktiv-feladatok">
+                <h2 class="aktiv-feladatok">Aktív Feladatok</h2>
+                <ul id="aktiv-lista">
+                    <li class="feladat-elem">
+                        <span class="feladat-szoveg">Bevásárlás</span>
+                        <div class="gombok">
+                            <button class="kesz-btn">Kész</button>
+                            <button class="torles-btn">Törlés</button>
+                        </div>
+                    </li>
+                    <li class="feladat-elem">
+                        <span class="feladat-szoveg">Tanulás</span>
+                        <div class="gombok">
+                            <button class="kesz-btn">Kész</button>
+                            <button class="torles-btn">Törlés</button>
+                        </div>
+                    </li>
+                    <li class="feladat-elem">
+                        <span class="feladat-szoveg">Takarítás</span>
+                        <div class="gombok">
+                            <button class="kesz-btn">Kész</button>
+                            <button class="torles-btn">Törlés</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="kesz-feladatok">
+                <h2>Elkészült Feladatok</h2>
+                <ul id="kesz-lista">
+                </ul>
+            </section>
+            <hr>
+            <section id="torolt-feladatok">
+                <h2>Törölt Feladatok</h2>
+                <ul id="torolt-lista">
+                    <span class="feladat-szoveg">Szemét kivitele</span> <!-- ez csak tesztnek raktam be hogy megnezem a css kinezetet -->
+                </ul>
+            </section>
+        </main>
+        <hr>
+        <footer> 
+            <p>A teendők lokálisan mentődnek.</p>
+            <p class="sshh">Az oldalt fenttartja: Bassam Teli Asad BT.</p> 
+        </footer>
+    </div>
+>>>>>>> Stashed changes
 </body>
 </html>

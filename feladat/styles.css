@@ -1,0 +1,156 @@
+<<<<<<< Updated upstream
+=======
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+    --bg-color: #F2E8CF;
+    --main-text: #386641;
+    --plus-btn: #84be62;
+    --complete: #A7C957;
+    --danger: #BC4749;
+    --dark-danger: #a33b3d;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--main-text);
+}
+
+.container {
+    background-color: var(--bg-color);
+    box-shadow: 5px 5px 15px gray;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer {
+    opacity: 0.4;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#feladat-hozzaadas {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#aktiv-feladatok {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#kesz-feladatok {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#torolt-feladatok {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#uj-feladat-input {
+    width: 65%;
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    color: var(--main-text);
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#uj-feladat-input:focus {
+    border-color: var(--plus-btn);
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#hozzaadas-btn {
+    background-color: var(--plus-btn);
+    color: white;
+    padding: 10px 15px;
+}
+
+#hozzaadas-btn:hover {
+    background-color: var(--complete);
+}
+
+.kesz-btn {
+    background-color: var(--plus-btn);
+    color: white;
+}
+
+.torles-btn {
+    background-color: var(--danger);
+    color: white;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feladat-elem {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feladat-szoveg {
+    font-weight: 600;
+}
+
+.gombok {
+    display: flex;
+    gap: 8px;
+}
+
+.sshh {
+    opacity: 10%;
+}
+
+.kesz-btn:hover {
+    background-color: var(--complete);
+}
+
+.torles-btn:hover {
+    background-color: var(--dark-danger);
+}
+
+#torolt-lista .feladat-szoveg {
+    text-decoration: line-through;
+    opacity: 50%;
+    color: var(--danger);
+}
+>>>>>>> Stashed changes
