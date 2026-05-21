@@ -22,3 +22,12 @@ gombok kattintásra működnek
 
 script pontosan lefut
 (nem található benne piros aláhúzás)
+
+-- 5. --
+
+gondosan elrendezet html
+(könnyen leolvasható adatok)
+
+-- 6. --
+
+css egyszerűen szépen elrendezet
