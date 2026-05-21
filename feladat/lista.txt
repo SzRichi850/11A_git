@@ -1,0 +1,24 @@
+-- 1. --
+
+htmlben minden rendben
+(nem található benne piros aláhúzás)
+
+
+-- 2. --
+
+CSS fálj ellenőrzése a html-ben
+(dízájn teszt)
+(aláhúzások tesztelése)
+
+
+-- 3. --
+
+gombok kattintásra működnek
+(button teszt)
+
+
+
+-- 4. --
+
+script pontosan lefut
+(nem található benne piros aláhúzás)
