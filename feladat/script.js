@@ -21,3 +21,14 @@ doneTask_3.addEventListener("click", function() {
     doneTask_3.style.backgroundColor = "pink";
     doneTask_3.style.color = "black";
 });
+
+
+
+const doneTask_4 = document.querySelector(".new_task_done");
+
+doneTask_4.addEventListener("click", function() {
+    doneTask_4.textContent = "Kész";
+    doneTask_4.style.backgroundColor = "pink";
+    doneTask_4.style.color = "black";
+});
+
