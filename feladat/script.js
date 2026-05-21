@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 let gombok = document.getElementsByClassName("kesz-btn");
 
 for (let i = 0; i < gombok.length; i++) {
@@ -18,4 +16,3 @@ for (let i = 0; i < gombok.length; i++) {
         keszLista.appendChild(listaElem);
     }
 }
->>>>>>> Stashed changes
