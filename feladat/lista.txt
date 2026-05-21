@@ -31,3 +31,8 @@ gondosan elrendezet html
 -- 6. --
 
 css egyszerűen szépen elrendezet
+
+
+-- 7. --
+
+html/css rendezés az oldahoz illően
