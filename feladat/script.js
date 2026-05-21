@@ -1,34 +1,18 @@
-const doneTask_1 = document.querySelector(".shop_done");
+let gombok = document.getElementsByClassName("kesz-btn");
 
-doneTask_1.addEventListener("click", function() {
-    doneTask_1.textContent = "Kész";
-    doneTask_1.style.backgroundColor = "pink";
-    doneTask_1.style.color = "black";
-});
+for (let i = 0; i < gombok.length; i++) {
+    gombok[i].onclick = function(esemeny) {
+        let gomb = esemeny.target;
+        let gombTarolo = gomb.parentElement;
+        let listaElem = gombTarolo.parentElement;
+        let szoveg = listaElem.querySelector(".feladat-szoveg");
 
-const doneTask_2 = document.querySelector(".learn_done");
+        szoveg.style.backgroundColor = "green";
+        szoveg.style.color = "white";
 
-doneTask_2.addEventListener("click", function() {
-    doneTask_2.textContent = "Kész";
-    doneTask_2.style.backgroundColor = "pink";
-    doneTask_2.style.color = "black";
-});
+        gomb.remove();
 
-const doneTask_3 = document.querySelector(".clean_done");
-
-doneTask_3.addEventListener("click", function() {
-    doneTask_3.textContent = "Kész";
-    doneTask_3.style.backgroundColor = "pink";
-    doneTask_3.style.color = "black";
-});
-
-
-
-const doneTask_4 = document.querySelector(".new_task_done");
-
-doneTask_4.addEventListener("click", function() {
-    doneTask_4.textContent = "Kész";
-    doneTask_4.style.backgroundColor = "pink";
-    doneTask_4.style.color = "black";
-});
-
+        let keszLista = document.getElementById("kesz-lista");
+        keszLista.appendChild(listaElem);
+    }
+}

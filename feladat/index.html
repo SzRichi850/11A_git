@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,28 +9,64 @@
 </head>
 <body>
 
-  <h1>To Do Lista</h1>
-    
-    <h2>Feladatok</h2>
+    <header>
+        <h1>To Do Lista</h1>
+    </header>
 
-        <p>Bevásárlás</p>
-        <button class="shop_done">Kész</button>
-        <button>Törlés</button>
-            <p>Tanulás</p>
-            <button class="learn_done">Kész</button>
-            <button>Törlés</button>
-                <p>Takarítás</p>
-                <button class="clean_done">Kész</button>
-                <button>Törlés</button>
+    <main>
+        <section id="feladat-hozzaadas">
+            <h2>Új feladat</h2>
+            <input type="text" id="uj-feladat-input" placeholder="Írd be a feladatot...">
+            <button id="hozzaadas-btn">Hozzáadás</button>
+        </section>
 
+        <hr>
 
-        <input type="text" placeholder="Új feladat">
-        <button>Hozzáadás</button>
+        <section id="aktiv-feladatok">
+            <h2>Aktív Feladatok</h2>
+            <ul id="aktiv-lista">
+                <li class="feladat-elem">
+                    <span class="feladat-szoveg">Bevásárlás</span>
+                    <div class="gombok">
+                        <button class="kesz-btn">Kész</button>
+                        <button class="torles-btn">Törlés</button>
+                    </div>
+                </li>
+                <li class="feladat-elem">
+                    <span class="feladat-szoveg">Tanulás</span>
+                    <div class="gombok">
+                        <button class="kesz-btn">Kész</button>
+                        <button class="torles-btn">Törlés</button>
+                    </div>
+                </li>
+                <li class="feladat-elem">
+                    <span class="feladat-szoveg">Takarítás</span>
+                    <div class="gombok">
+                        <button class="kesz-btn">Kész</button>
+                        <button class="torles-btn">Törlés</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="kesz-feladatok">
+            <h2>Elkészült Feladatok</h2>
+            <ul id="kesz-lista">
+            </ul>
+        </section>
+
+        <section id="torolt-feladatok">
+            <h2>Törölt Feladatok</h2>
+            <ul id="torolt-lista">
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>A teendők lokálisan mentődnek.</p>
         
-
-  <p>A teendők lokálisan mentődnek.</p>
-
-  <p>2026. 05. 21. wauuuu</p>
+    </footer>
 
 </body>
 </html>
