@@ -41,9 +41,7 @@ function teendoHozzaadasa() {
     input.value = "";
 }
 
-
-//-- hozzáadás funkció
-
+//-- törlés funkció
 
 let torlesGombok = document.getElementsByClassName("torles-btn");
 
@@ -52,34 +50,34 @@ for (let i = 0; i < torlesGombok.length; i++) {
         let gomb = esemeny.target;
         let gombTarolo = gomb.parentElement;
         let listaElem = gombTarolo.parentElement;
-
-        gombTarolo.remove();
+        
+        let szovegElem = listaElem.querySelector(".feladat-szoveg");
 
         let toroltLista = document.getElementById("torolt-lista");
-        toroltLista.appendChild(listaElem);
+        toroltLista.appendChild(szovegElem);
+
+        listaElem.remove();
     }
 }
+//--feladat hozzáadása funkció
 
-
-
-
-
-
-function letrehozElem(task) {
+function letrehozElem(feladatSzoveg) {
     const li = document.createElement("li");
     li.className = "feladat-elem";
 
     const span = document.createElement("span");
     span.className = "feladat-szoveg";
-    span.innerText = task.nev;
+    span.innerText = feladatSzoveg;
 
     const btnBox = document.createElement("div");
     btnBox.className = "gombok";
 
     const keszBtn = document.createElement("button");
+    keszBtn.className = "kesz-btn";
     keszBtn.innerText = "Kész";
 
     const torlesBtn = document.createElement("button");
+    torlesBtn.className = "torles-btn";
     torlesBtn.innerText = "Törlés";
 
     keszBtn.onclick = function () {
@@ -90,18 +88,25 @@ function letrehozElem(task) {
     };
 
     torlesBtn.onclick = function () {
-        btnBox.remove();
-        document.getElementById("torolt-lista").appendChild(li);
+        document.getElementById("torolt-lista").appendChild(span);
+        li.remove();
     };
 
     btnBox.appendChild(keszBtn);
     btnBox.appendChild(torlesBtn);
-
     li.appendChild(span);
     li.appendChild(btnBox);
 
     return li;
 }
 
-document.getElementById("hozzaadas-btn")
-    .addEventListener("click", teendoHozzaadasa);
+document.getElementById("hozzaadas-btn").onclick = function() {
+    const inputMezo = document.getElementById("uj-feladat-input");
+    const szoveg = inputMezo.value;
+
+    if (szoveg !== "") {
+        const ujElem = letrehozElem(szoveg);
+        document.getElementById("aktiv-lista").appendChild(ujElem);
+        inputMezo.value = "";
+    }
+};

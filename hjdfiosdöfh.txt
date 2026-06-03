@@ -1,0 +1,40 @@
+function letrehozElem(task) {
+    const li = document.createElement("li");
+    li.className = "feladat-elem";
+
+    const span = document.createElement("span");
+    span.className = "feladat-szoveg";
+    span.innerText = task.nev;
+
+    const btnBox = document.createElement("div");
+    btnBox.className = "gombok";
+
+    const keszBtn = document.createElement("button");
+    keszBtn.innerText = "Kész";
+
+    const torlesBtn = document.createElement("button");
+    torlesBtn.innerText = "Törlés";
+
+    keszBtn.onclick = function () {
+        span.style.textDecoration = "line-through";
+        span.style.opacity = "50%";
+        keszBtn.remove();
+        document.getElementById("kesz-lista").appendChild(li);
+    };
+
+    torlesBtn.onclick = function () {
+        btnBox.remove();
+        document.getElementById("torolt-lista").appendChild(li);
+    };
+
+    btnBox.appendChild(keszBtn);
+    btnBox.appendChild(torlesBtn);
+
+    li.appendChild(span);
+    li.appendChild(btnBox);
+
+    return li;
+}
+
+document.getElementById("hozzaadas-btn")
+    .addEventListener("click", teendoHozzaadasa);
