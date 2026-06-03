@@ -108,10 +108,10 @@ document.getElementById("hozzaadas-btn")
     .addEventListener("click", teendoHozzaadasa);
 
 
-
 const taskInput = document.getElementById('taskInput');
 const addTaskBtn = document.getElementById('addTaskBtn');
 const taskList = document.getElementById('taskList');
+console.log(taskList)
 
 let tasks1 = JSON.parse(localStorage.getItem('tasks1')) || [];
 renderTasks1();
