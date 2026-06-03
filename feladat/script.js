@@ -1,3 +1,5 @@
+//-- kész funkció
+
 let gombok = document.getElementsByClassName("kesz-btn");
 
 for (let i = 0; i < gombok.length; i++) {
@@ -38,6 +40,9 @@ function teendoHozzaadasa() {
 
     input.value = "";
 }
+
+
+//-- hozzáadás funkció
 
 function letrehozElem(task) {
     const li = document.createElement("li");
