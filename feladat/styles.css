@@ -156,11 +156,11 @@ ul {
     text-align: center;
 }
 
-.mentes-btn{
+#mentes-btn{
     background-color: var(--plus-btn);
     color: white;
 }
 
-.mentes-btn:hover{
+#mentes-btn:hover{
     background-color: var(--complete);
 }
