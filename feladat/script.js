@@ -115,10 +115,10 @@ document.getElementById("hozzaadas-btn").onclick = function() {
         document.getElementById('regBtn').addEventListener('click', function() {
             
             const usernameValue = document.getElementById('usernameInput').value;
-            const emailValue = document.getElementById('emailInput').value;
+
             const passwordValue = document.getElementById('passwordInput').value;
 
-            if (!usernameValue || !emailValue || !passwordValue) {
+            if (!usernameValue || !passwordValue) {
                 alert('Kérjük, töltsön ki minden mezőt!');
                 return;
             }
@@ -127,7 +127,6 @@ document.getElementById("hozzaadas-btn").onclick = function() {
 
             let newUser = {
                 username: usernameValue,
-                email: emailValue,
                 password: passwordValue
             };
 
@@ -137,6 +136,5 @@ document.getElementById("hozzaadas-btn").onclick = function() {
             alert('Sikeres regisztráció! Az adatokat elmentettük a localStorage-be.');
             
             document.getElementById('usernameInput').value = '';
-            document.getElementById('emailInput').value = '';
             document.getElementById('passwordInput').value = '';
         });

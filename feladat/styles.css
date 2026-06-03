@@ -41,7 +41,7 @@ footer {
     margin-top: 20px;
 }
 
-#regisztracio-nev {
+#usernameInput {
     width: 65%;
     padding: 10px 15px;
     border: 2px solid white;
@@ -54,7 +54,7 @@ footer {
     margin-bottom: 15px;
 }
 
-#regisztracio-jelszo {
+#passwordInput {
     width: 65%;
     padding: 10px 15px;
     border: 2px solid white;
@@ -72,15 +72,15 @@ footer {
     margin-bottom: 20px;
 }
 
-#regisztracio-jelszo:focus {
+#usernameInput:focus {
     border-color: var(--plus-btn);
 }
 
-#regisztracio-nev:focus {
+#passwordInput:focus {
     border-color: var(--plus-btn);
 }
 
-#regisztracio-gomb {
+#regBtn {
     background-color: var(--plus-btn);
     color: white;
     padding: 10px 15px;
