@@ -152,6 +152,15 @@ ul {
     color: var(--danger);
 }
 
-.mentes-btn{
+.mentes{
     text-align: center;
+}
+
+.mentes-btn{
+    background-color: var(--plus-btn);
+    color: white;
+}
+
+.mentes-btn:hover{
+    background-color: var(--complete);
 }
