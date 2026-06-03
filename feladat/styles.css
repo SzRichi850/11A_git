@@ -41,6 +41,8 @@ footer {
     margin-top: 20px;
 }
 
+/* regisztracio kezdete */
+
 #regisztracio-nev {
     width: 65%;
     padding: 10px 15px;
@@ -85,6 +87,8 @@ footer {
     color: white;
     padding: 10px 15px;
 }
+
+/* regisztracio vége */
 
 #feladat-hozzaadas {
     text-align: center;
