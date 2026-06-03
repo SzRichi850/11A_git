@@ -41,6 +41,51 @@ footer {
     margin-top: 20px;
 }
 
+#regisztracio-nev {
+    width: 65%;
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    color: var(--main-text);
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#regisztracio-jelszo {
+    width: 65%;
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    color: var(--main-text);
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#regisztracio {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#regisztracio-jelszo:focus {
+    border-color: var(--plus-btn);
+}
+
+#regisztracio-nev:focus {
+    border-color: var(--plus-btn);
+}
+
+#regisztracio-gomb {
+    background-color: var(--plus-btn);
+    color: white;
+    padding: 10px 15px;
+}
+
 #feladat-hozzaadas {
     text-align: center;
     margin-bottom: 20px;
