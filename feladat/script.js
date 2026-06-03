@@ -44,6 +44,27 @@ function teendoHozzaadasa() {
 
 //-- hozzáadás funkció
 
+
+let torlesGombok = document.getElementsByClassName("torles-btn");
+
+for (let i = 0; i < torlesGombok.length; i++) {
+    torlesGombok[i].onclick = function(esemeny) {
+        let gomb = esemeny.target;
+        let gombTarolo = gomb.parentElement;
+        let listaElem = gombTarolo.parentElement;
+
+        gombTarolo.remove();
+
+        let toroltLista = document.getElementById("torolt-lista");
+        toroltLista.appendChild(listaElem);
+    }
+}
+
+
+
+
+
+
 function letrehozElem(task) {
     const li = document.createElement("li");
     li.className = "feladat-elem";
