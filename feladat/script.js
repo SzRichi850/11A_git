@@ -110,3 +110,68 @@ document.getElementById("hozzaadas-btn").onclick = function() {
         inputMezo.value = "";
     }
 };
+
+//-- feladat mentés
+
+document.getElementById("mentes-btn").onclick = function() {
+    let aktivLista = document.getElementById("aktiv-lista");
+    let aktivSpans = aktivLista.getElementsByClassName("feladat-szoveg");
+    let aktivTomb = [];
+    for (let i = 0; i < aktivSpans.length; i++) {
+        aktivTomb.push(aktivSpans[i].innerText);
+    }
+    localStorage.setItem("aktivak", JSON.stringify(aktivTomb));
+
+    let keszLista = document.getElementById("kesz-lista");
+    let keszSpans = keszLista.getElementsByClassName("feladat-szoveg");
+    let keszTomb = [];
+    for (let i = 0; i < keszSpans.length; i++) {
+        keszTomb.push(keszSpans[i].innerText);
+    }
+    localStorage.setItem("keszek", JSON.stringify(keszTomb));
+
+    let toroltLista = document.getElementById("torolt-lista");
+    let toroltSpans = toroltLista.getElementsByClassName("feladat-szoveg");
+    let toroltTomb = [];
+    for (let i = 0; i < toroltSpans.length; i++) {
+        toroltTomb.push(toroltSpans[i].innerText);
+    }
+    localStorage.setItem("toroltek", JSON.stringify(toroltTomb));
+
+    alert("Mentve!");
+}
+
+window.onload = function() {
+    let mentettAktiv = JSON.parse(localStorage.getItem("aktivak"));
+    if (mentettAktiv != null) {
+        for (let i = 0; i < mentettAktiv.length; i++) {
+            let ujElem = letrehozElem(mentettAktiv[i]);
+            document.getElementById("aktiv-lista").appendChild(ujElem);
+        }
+    }
+
+    let mentettKesz = JSON.parse(localStorage.getItem("keszek"));
+    if (mentettKesz != null) {
+        for (let i = 0; i < mentettKesz.length; i++) {
+            let li = document.createElement("li");
+            li.className = "feladat-elem";
+            let span = document.createElement("span");
+            span.className = "feladat-szoveg";
+            span.innerText = mentettKesz[i];
+            span.style.textDecoration = "line-through";
+            span.style.opacity = "50%";
+            li.appendChild(span);
+            document.getElementById("kesz-lista").appendChild(li);
+        }
+    }
+
+    let mentettTorolt = JSON.parse(localStorage.getItem("toroltek"));
+    if (mentettTorolt != null) {
+        for (let i = 0; i < mentettTorolt.length; i++) {
+            let span = document.createElement("span");
+            span.className = "feladat-szoveg";
+            span.innerText = mentettTorolt[i];
+            document.getElementById("torolt-lista").appendChild(span);
+        }
+    }
+}
