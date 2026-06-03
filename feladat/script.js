@@ -110,3 +110,33 @@ document.getElementById("hozzaadas-btn").onclick = function() {
         inputMezo.value = "";
     }
 };
+
+
+        document.getElementById('regBtn').addEventListener('click', function() {
+            
+            const usernameValue = document.getElementById('usernameInput').value;
+            const emailValue = document.getElementById('emailInput').value;
+            const passwordValue = document.getElementById('passwordInput').value;
+
+            if (!usernameValue || !emailValue || !passwordValue) {
+                alert('Kérjük, töltsön ki minden mezőt!');
+                return;
+            }
+
+            let users = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+
+            let newUser = {
+                username: usernameValue,
+                email: emailValue,
+                password: passwordValue
+            };
+
+            users.push(newUser);
+            localStorage.setItem('registeredUsers', JSON.stringify(users));
+
+            alert('Sikeres regisztráció! Az adatokat elmentettük a localStorage-be.');
+            
+            document.getElementById('usernameInput').value = '';
+            document.getElementById('emailInput').value = '';
+            document.getElementById('passwordInput').value = '';
+        });
