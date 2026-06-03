@@ -56,6 +56,11 @@ footer {
     margin-bottom: 20px;
 }
 
+.kesz-lista{
+    text-decoration: line-through
+    color gray;
+}
+
 #torolt-feladatok {
     text-align: center;
     margin-bottom: 20px;

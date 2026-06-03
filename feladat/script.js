@@ -20,6 +20,7 @@ for (let i = 0; i < gombok.length; i++) {
 }
 
 
+
 let tasks = [];
 
 function teendoHozzaadasa() {
@@ -105,3 +106,52 @@ function letrehozElem(task) {
 
 document.getElementById("hozzaadas-btn")
     .addEventListener("click", teendoHozzaadasa);
+
+
+
+const taskInput = document.getElementById('taskInput');
+const addTaskBtn = document.getElementById('addTaskBtn');
+const taskList = document.getElementById('taskList');
+
+let tasks1 = JSON.parse(localStorage.getItem('tasks1')) || [];
+renderTasks1();
+
+addTaskBtn.addEventListener('click', () => {
+    if (taskInput.value.trim() === '') return;
+
+    const newTask = {
+        id: Date.now(),
+        text: taskInput.value,
+        completed: false
+    };
+
+    tasks1.push(newTask);
+    saveToLocalStorage();
+    renderTasks1();
+    taskInput.value = '';
+});
+
+function renderTasks1() {
+    taskList.innerHTML = '';
+
+    tasks1.forEach(task => {
+        const li = document.createElement('li');
+        li.textContent = task.text;
+        li.dataset.id = task.id;
+        
+        if (task.completed){
+            li.classList.add('completed');
+        }
+
+        li.addEventListener('click', () => {
+            task.completed = !task.completed;
+            saveToLocalStorage();
+            renderTasks1();
+        });
+        taskList.appendChild(li);
+    });
+}
+
+function saveToLocalStorage(){
+    localStorage.setItem('tasks', JSON.stringify(tasks1))
+}
