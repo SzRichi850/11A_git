@@ -164,3 +164,30 @@ ul {
 #mentes-btn:hover{
     background-color: var(--complete);
 }
+
+#login-nev, #login-jelszo {
+    width: 65%;
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    color: var(--main-text);
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#login-nev:focus, #login-jelszo:focus {
+    border-color: var(--plus-btn);
+}
+
+#login-gomb {
+    background-color: var(--plus-btn);
+    color: white;
+    padding: 10px 15px;
+}
+
+#login-gomb:hover {
+    background-color: var(--complete);
+}
